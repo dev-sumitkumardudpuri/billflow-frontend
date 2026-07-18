@@ -12,8 +12,7 @@ function AuthModal({ isOpen, onClose, isSignup: initialIsSignup, theme }) {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const apiHost =
-    import.meta.env.VITE_APP_API_BASE_URL || "http://localhost:5000";
+  const apiHost = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
   const apiBaseUrl = `${apiHost}/api/auth`;
 
   useEffect(() => {
